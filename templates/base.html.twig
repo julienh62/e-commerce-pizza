@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}hello{% endblock %} site e-commerce Sf6</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {# feuille de style #}
+    <link rel="stylesheet" href="{{  asset('assets/css/bootstrap.min.css') }}">
+    {% block stylesheets %} {% endblock %}
+    <link rel="stylesheet" href="{{  asset('assets/css/style.css') }}">
+
+    {# fichiers js #}
+    {# defer permet le chargement js en dernier #}
+    <script src="{{  asset('assets/js/bootstrap.bundle.js') }}"
+            defer> </script>
+    {% block javascripts %} {% endblock %}
+    <script src="{{  asset('assets/js/script.js') }}" defer> </script>
+
+
+</head>
+
+<body>
+{% include "_partials/_nav.html.twig" %}
+{#{% if app.user and app.user.isVerified == false %}#}
+{#    <div class="alert alert-warning alert-dismissible" role="alert">#}
+{#        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>#}
+{#        <div class="alert-message">#}
+{#            <strong>Votre compte n'est pas activé</strong>,#}
+{#            <a href="{{ path('resend_verif') }}"> renvoyer le lien d'activation </a>#}
+{#        </div>#}
+{#    </div>#}
+{#{% endif %}#}
+
+{#{% include "_partials/_flash.html.twig" %}#}
+
+{#{% block body %}{% endblock %}#}
+
+{#{% include "_partials/_footer.html.twig" %}#}
+
+
+</body>
+</html>
