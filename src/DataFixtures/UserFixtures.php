@@ -23,8 +23,8 @@ class UserFixtures extends Fixture
     {
         $admin = new User();
         $admin->setEmail('jhennebo@gmail.com');
-        $admin->setLastname('hennebo');
-        $admin->setFirstname('julien');
+//        $admin->setLastname('hennebo');
+//        $admin->setFirstname('julien');
 //     c
         $admin->setPassword(
             $this->passwordEncoder->hashPassword($admin, 'admin')
@@ -38,8 +38,8 @@ class UserFixtures extends Fixture
         for($usr = 1; $usr <= 5; $usr++){
             $user = new User();
             $user->setEmail($faker->email);
-            $user->setLastname($faker->lastName);
-            $user->setFirstname($faker->firstName);
+//            $user->setLastname($faker->lastName);
+//            $user->setFirstname($faker->firstName);
 //            $user->setAddress($faker->streetAddress);
 //            $user->setCity($faker->city);
 //            $user->setCountry($faker->country);
